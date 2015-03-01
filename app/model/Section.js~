@@ -1,0 +1,9 @@
+Ext.define('ToDo.model.Section', {
+	extend: 'Ext.data.Model',
+	config: {
+		fields: [
+			{name: 'name', type: 'string'},
+			{name: 'position', type: 'int'}
+		]
+	}
+});
