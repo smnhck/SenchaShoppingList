@@ -1,13 +1,15 @@
 Ext.define('ShoppingList.controller.Main', {
 	extend: 'Ext.app.Controller',
 	requires: [
+		'Ext.form.Panel',
 		'ShoppingList.model.Article'
 	],
 	config: {
 		refs: {
     			theButton: '#addButton',
 			theForm: '#form',
-			theList:'#articleList'
+			theList:'#articleList',
+			theField: '#artName'
 		},
 		control: {
 			theButton: {
@@ -27,6 +29,9 @@ Ext.define('ShoppingList.controller.Main', {
 		
 		var store = Ext.getStore('Articles');
 
+		var field = this.getTheField();
+		field.reset();
+		
 		store.add(newArticleVals);
 		store.sync();
 	},

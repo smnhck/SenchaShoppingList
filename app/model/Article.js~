@@ -3,10 +3,7 @@ Ext.define('ShoppingList.model.Article', {
 	config: {
 		fields: [
 			{name: 'name', type: 'string'}
-		],
-		 validations: [
-         	   { type: 'presence',  field: 'name', message: 'No empty Articlenames'}
-        	]
+		]
 	},
 	init: function() {
 		console.log('model init');

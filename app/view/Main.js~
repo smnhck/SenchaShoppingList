@@ -21,7 +21,8 @@ Ext.define('ShoppingList.view.Main', {
 			store: Ext.getStore('Articles'),
 			itemTpl: '{name}',
 			emptyText: "Got all",
-			flex: 4
+			flex: 4,
+			id: 'articleList'
 
 		};
 
